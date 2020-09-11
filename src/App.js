@@ -45,9 +45,7 @@ function App() {
       <Container>
         <Jumbotron className="text-center">
           <h1>Conto alla rovescia</h1>
-          <p>
-            <Counter date={TargetDate}></Counter>
-          </p>
+          <Counter date={TargetDate}></Counter>
         </Jumbotron>
       </Container>
     </div >
