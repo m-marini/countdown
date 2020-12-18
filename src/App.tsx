@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import './App.css';
 import { Navbar, Container, Jumbotron, Badge, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import moment from 'moment';
-//import 'moment/dist/locale/it.js';
-//import moment from 'moment/min/moment-with-locales';
+import moment, { Moment } from 'moment';
 import 'moment/locale/it';
 
-const Version = "1.0.1";
+const Version = "1.0.2";
 
 moment.locale('it');
 
 const TargetDate = moment('2022-02-01T00:00:00+01:00', moment.ISO_8601);
 
-function Counter({ date }) {
-
-  const duration = moment.duration(date.diff(moment()))
+const Counter: FunctionComponent<Readonly<{
+  date: Moment;
+}>> = ({ date }) => {
+  const duration = moment.duration(date.diff(moment()));
 
   return (
     <div>
@@ -30,7 +29,7 @@ function Counter({ date }) {
   );
 }
 
-function App() {
+export const App: FunctionComponent<{}> = () => {
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -51,5 +50,3 @@ function App() {
     </div >
   );
 }
-
-export default App;
