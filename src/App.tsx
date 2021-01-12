@@ -4,8 +4,9 @@ import { Navbar, Container, Jumbotron, Badge, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import moment, { Moment } from 'moment';
 import 'moment/locale/it';
+import {version} from '../package.json';
 
-const Version = "1.0.2";
+const Version = version;
 
 moment.locale('it');
 
