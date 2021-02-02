@@ -11,7 +11,7 @@ moment.locale('it');
 const Counter: FunctionComponent<{
   date: Moment;
 }> = ({ date }) => {
-  const duration = moment.duration(date.diff(moment()));
+  const duration = moment.duration(date.diff(moment().startOf('day')));
 
   return (
     <div>
@@ -31,7 +31,7 @@ const CountdownPage: FunctionComponent<{}> = () => {
   const br = queryParms.get('br') ?? 'www.mmarini.org';
   const lnk = queryParms.get('lnk') ?? 'http://www.mmarini.org';
   const dt = queryParms.get('dt') ?? '2022-02-01'
-  const targetDate = moment(`${dt}T00:00:00+01:00`, moment.ISO_8601);
+  const targetDate = moment(`${dt}`, moment.ISO_8601).startOf('day');
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="lg">

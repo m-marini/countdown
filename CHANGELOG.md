@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.1] 2021-02-02
+
+### Fixed
+
+-Issue #13: Compute date from start of day
+
 ## [1.1.0] 2021-01-13
 
 ### Added
